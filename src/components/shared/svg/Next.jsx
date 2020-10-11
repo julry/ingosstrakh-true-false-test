@@ -5,6 +5,14 @@ const Wrapper = styled.div`
   position: relative;
   height: 8.0586vh;
   width: 18.8vw;
+  @media screen and (min-width: 640px) {
+    height: 60px;
+    width: 60px;
+    @media (max-height: 700px) {
+      height: 8vh;
+      width: 8vh;
+    }
+  }
 `;
 
 const Background = styled.div`
@@ -14,8 +22,14 @@ const Background = styled.div`
   left: 1vw;
   top: 0.2vw;
   @media screen and (min-width: 640px) {
+    height: 60px;
+    width: 60px;
     top: 1px;
     left: 3px;
+     @media (max-height: 700px) {
+      height: 8vh;
+      width: 8vh;
+    }
   }
 `;
 
@@ -25,6 +39,14 @@ const Border = styled.div`
   width: 18.8vw;
   top: 0.11vh;
   left: 0;
+  @media screen and (min-width: 640px) {
+    height: 60px;
+    width: 60px;
+     @media (max-height: 700px) {
+      height: 8vh;
+      width: 8vh;
+    }
+  }
 `;
 
 const Next = () => {

@@ -55,6 +55,7 @@ const Button = (props) => {
       setBackColor(main);
       setTextColor("#fff");
       setIndex(10);
+      setTimeout( resetColors, 5000);
     }
     else {
       resetColors();
