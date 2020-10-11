@@ -32,9 +32,9 @@ const ButtonWrapper = styled.div`
   margin-right: 20vw;
   margin-top: -8vh;
   @media screen and (min-width: 640px) {
-    margin-right: 45px;
+    margin-right: 90px;
     @media (max-height: 700px) {
-      margin-right: 0;
+      margin-right: 10vh;
     }
   }
 `;
