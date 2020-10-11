@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Verveine Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Verveine Regular"),
+    url("../fonts/Verveine/VerveineRegular.woff") format("woff"),
+    url("../fonts/Verveine/VerveineRegular.ttf") format("ttf");
+}
