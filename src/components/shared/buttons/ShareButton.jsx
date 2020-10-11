@@ -34,13 +34,16 @@ const ShareButton = (props) => {
     window.location.pathname,
   ].join("");
 
-  const shareTitle = `Разбираюсь в космической сфере не хуже Илона Маска! Составишь мне конкуренцию? #ingosstart_правда_vs_ложь
-`;
+  const shareTitle = 'Игосстрах Правда vs ложь #ingosstart_правда_vs_ложь'
   const image = resolve(url, shareImage);
+  const shareText = `Разбираюсь в космической сфере не хуже Илона Маска 😎 Составишь мне конкуренцию? #ingosstart_правда_vs_ложь
+`;
   const queryParams = new URLSearchParams();
   queryParams.append("url", url);
   queryParams.append("title", shareTitle);
   queryParams.append("image", image);
+  queryParams.append('description', '#ingosstart_правда_vs_ложь');
+  queryParams.append("comment", shareText);
 
   const link = `http://vk.com/share.php?${queryParams.toString()}`;
 

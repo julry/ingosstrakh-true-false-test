@@ -60,7 +60,7 @@ export function ScreenWrapper() {
     +screenParam || 0
   );
   const [isExplanation, setIsExplanation] = useState(false);
-  const [score, setScore] = useState(6);
+  const [score, setScore] = useState(0);
   const [answer, setAnswer] = useState(null);
 
   const { component, explanation, preloadImages, ...screen } =
