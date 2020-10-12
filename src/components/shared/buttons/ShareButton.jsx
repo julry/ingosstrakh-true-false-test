@@ -26,6 +26,11 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const StyledForm = styled.form`
+    height: 19vw;
+    width: 100%;
+`
+
 const ShareButton = (props) => {
   const url = [
     window.location.protocol,
@@ -34,13 +39,12 @@ const ShareButton = (props) => {
     window.location.pathname,
   ].join("");
 
-  const shareTitle = 'Игосстрах Правда vs ложь #ingosstart_правда_vs_ложь'
   const image = resolve(url, shareImage);
   const shareText = `Разбираюсь в космической сфере не хуже Илона Маска 😎 Составишь мне конкуренцию? #ingosstart_правда_vs_ложь
 `;
   const queryParams = new URLSearchParams();
   queryParams.append("url", url);
-  queryParams.append("title", shareTitle);
+  queryParams.append("title", shareText);
   queryParams.append("image", image);
   queryParams.append('description', '#ingosstart_правда_vs_ложь');
   queryParams.append("comment", shareText);
@@ -52,9 +56,9 @@ const ShareButton = (props) => {
   };
 
   return (
-    <form action={link} target="_blank">
+    <StyledForm action={link} target="_blank">
       <StyledButton text={props.text} onClick={onShare} color={props.color} />
-    </form>
+    </StyledForm>
   );
 };
 
