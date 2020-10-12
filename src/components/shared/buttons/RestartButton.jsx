@@ -7,6 +7,7 @@ const StyledButton = styled(Button)`
   text-align: center;
   font-size: 20px;
   white-space: pre-line;
+  margin: 0;
   text-shadow: 0.5px -0.5px 0px ${(props) => props.color};
   @media screen and (max-height: 750px) {
     font-size: 16px;

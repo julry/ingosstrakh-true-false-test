@@ -7,7 +7,8 @@ import { shareImage } from "../../../constants/images";
 const StyledButton = styled(Button)`
   text-align: center;
   font-size: 20px;
-  text-shadow: 0.5px -0.5px 0px ${(props) => props.color};
+  margin: 0;
+  white-space: pre-line;
   @media screen and (max-height: 750px) {
     font-size: 16px;
   }
@@ -27,8 +28,10 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledForm = styled.form`
-    height: 19vw;
+    height: fit-content;
     width: 100%;
+    text-shadow: 0.5px -0.5px 0px #33aafd;
+
 `
 
 const ShareButton = (props) => {
