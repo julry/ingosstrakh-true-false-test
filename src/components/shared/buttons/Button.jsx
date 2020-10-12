@@ -5,7 +5,23 @@ import ButtonBackground from "../svg/ButtonBackground";
 const Wrapper = styled.div`
   margin-bottom: 4vh;
   font-size: 25px;
+  width: 100%;
+  height: 19vw;
+  max-height: 90px;
   position: relative;
+  display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+  display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  
   text-shadow: 0.5px -1px 0px ${(props) => props.color};
   color: ${(props) => props.textColor};
    &:hover{
@@ -30,13 +46,12 @@ const TextWrapper = styled.div`
 `;
 
 const Button = (props) => {
-
-  const INITIAL_STATE= {
+  const INITIAL_STATE = {
     main: props.color,
-    back: '#fff',
-    text: '#000',
-    index: 0
-  }
+    back: "#fff",
+    text: "#000",
+    index: 0,
+  };
   const [mainColor, setMainColor] = useState(INITIAL_STATE.main);
   const [backColor, setBackColor] = useState(INITIAL_STATE.back);
   const [textColor, setTextColor] = useState(INITIAL_STATE.text);
@@ -47,7 +62,7 @@ const Button = (props) => {
     setBackColor(INITIAL_STATE.back);
     setTextColor(INITIAL_STATE.text);
     setIndex(INITIAL_STATE.index);
-  }
+  };
   const changeColors = () => {
     const main = mainColor;
     if (main === INITIAL_STATE.main) {
@@ -55,9 +70,8 @@ const Button = (props) => {
       setBackColor(main);
       setTextColor("#fff");
       setIndex(10);
-      setTimeout( resetColors, 5000);
-    }
-    else {
+      setTimeout(resetColors, 5000);
+    } else {
       resetColors();
     }
   };

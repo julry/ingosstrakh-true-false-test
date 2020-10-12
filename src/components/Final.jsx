@@ -4,12 +4,11 @@ import { questions } from "../questions.config";
 import { ProgressContext } from "../contexts/ProgressContext";
 import SharpCallout from "./shared/callouts/SharpCallout";
 import { ColorTypes } from "../colorTypes.config";
-import ShareButton from "./shared/buttons/ShareButton";
-import RestartButton from "./shared/buttons/RestartButton";
 import checkResult from "../utils/checkResult";
 
 const Wrapper = styled.div`
   height: 100%;
+  width: 100%;
   padding: 5vh 0 0;
   display: flex;
   flex-direction: column;
@@ -17,9 +16,6 @@ const Wrapper = styled.div`
   color: white;
   font-size: 22px;
   white-space: pre-line;
-  @media screen and (max-height: 750px) {
-    font-size: 18px;
-  }
 `;
 
 const Title = styled.h1`
@@ -38,7 +34,7 @@ const Description = styled(SharpCallout)`
   line-height: 1em;
   margin-top: 4vh;
   @media screen and (max-height: 750px) {
-    height: 40.06vh;
+    height: 35.06vh;
     font-size: 18px;
   }
 
@@ -66,8 +62,23 @@ const Description = styled(SharpCallout)`
   }
 `;
 
+
+const TextWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`
+
 const Text = styled.p`
-  margin-top: 7vh;
+  margin-top: 5vh;
+  text-align: left;
+  max-width: 295px;
+
+  @media screen and (max-width: 300px) {
+      font-size: 18px;
+  }
+
   @media screen and (max-height: 550px) {
     font-size: 16px;
     margin-top: 5vh;
@@ -80,8 +91,8 @@ const Text = styled.p`
     @media screen and (max-height: 700px) {
       font-size: 16px;
     }
-
     @media (max-height: 500px) {
+    
       font-size: 14px;
     }
   }
@@ -108,13 +119,15 @@ const Final = () => {
       </Title>
       <Description text={result.text} />
       <result.component text={result.buttonText} color={ColorTypes.Common} />
-      <Text>
-        Еще больше интересных фактов {"\n"} в официальной группе{" "}
-        <Link target={"_blank"} href={INGOSSTRAKH_VK_LINK}>
-          Ингосстрах VK
-        </Link>
-        .
-      </Text>
+      <TextWrapper>
+          <Text>
+              Еще больше интересных фактов {"\n"} в официальной группе{" "}
+              <Link target={"_blank"} href={INGOSSTRAKH_VK_LINK}>
+                  Ингосстрах VK
+              </Link>
+              .
+          </Text>
+      </TextWrapper>
     </Wrapper>
   );
 };
