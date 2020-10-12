@@ -80,7 +80,7 @@ const TitleWrapper = styled.div`
 
 const DescriptionField = styled(SharpCallout)`
   font-size: 19px;
-  height: 32.26vh;
+  height: 32.86vh;
   max-height: 290px;
   max-width: 320px;
   width: 89.7673vw;

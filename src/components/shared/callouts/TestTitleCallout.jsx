@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   max-width: 225px;
   height: 16.6vh;
   max-height: 180px;
-  font-size: 30px;
+  font-size: 28px;
   @media screen and (max-width: 360px) {
     font-size: 24px;
   }

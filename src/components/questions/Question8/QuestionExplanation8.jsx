@@ -6,7 +6,7 @@ import { getQuestionById } from "../../../utils/getQuestionbyId";
 import ExplanationWrapper from "../../ExplanationWrapper";
 
 const FirstDescription = styled(SmoothCallout)`
-  font-size: 18px;
+  font-size: 16px;
   height: 28.5vh;
   width: 89vw;
   @media screen and (max-height: 550px) {
