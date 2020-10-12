@@ -45,7 +45,7 @@ const Text = styled.p`
   left: 53.5%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  margin-top: -15%;
+  margin-top: -13%;
   @media screen and (max-height: 550px) {
     margin-top: -20%;
   }

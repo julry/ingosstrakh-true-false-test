@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
 import { ProgressContext } from "../../../contexts/ProgressContext";
 import Button from "./Button";
+import styled from 'styled-components';
 
+const StyledButton = styled(Button)`
+  margin: 0;
+`
 const StartButton = (props) => {
   const { setNext } = useContext(ProgressContext);
 
@@ -9,7 +13,7 @@ const StartButton = (props) => {
     setTimeout(() => setNext(), 300);
   };
 
-  return <Button text={props.text} onClick={onStart} color={props.color} />;
+  return <StyledButton text={props.text} onClick={onStart} color={props.color} />;
 };
 
 export default StartButton;

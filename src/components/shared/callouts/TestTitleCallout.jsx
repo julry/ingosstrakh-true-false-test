@@ -8,20 +8,20 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   z-index: 1;
-  width: 63.2vw;
+  width: 60.2vw;
   max-width: 225px;
-  height: 18.6vh;
+  height: 16.6vh;
   max-height: 180px;
-  font-size: 34px;
+  font-size: 30px;
   @media screen and (max-width: 360px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   @media screen and (max-height: 550px) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @media screen and (max-height: 350px) {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   @media screen and (min-width: 640px) {

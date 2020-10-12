@@ -11,10 +11,11 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 `;
 const ImageBackground = styled.div`
   position: absolute;
-  height: 43%;
+  height: 40%;
   right: 0;
   top: 0;
   left: 0;
@@ -24,7 +25,7 @@ const ImageWrapper = styled.div`
   background: white;
   display: flex;
   justify-content: center;
-  height: 43%;
+  height: 40%;
   width: 100%;
 `;
 const Image = styled.img`
@@ -35,8 +36,10 @@ const Image = styled.img`
 
 const Question = styled(QuestionCallout)`
   font-size: 16px;
-  width: 320px;
-  height: 222px;
+  width: 90vw;
+  max-width: 320px;
+  height: 28vh;
+  max-height: 222px;
   margin-top: -15vh;
 
   @media screen and (min-height: 750px) {
@@ -60,6 +63,7 @@ const Question = styled(QuestionCallout)`
     font-size: 22px;
     line-height: 0.9em;
     width: 300px;
+    margin-top:-10vh;
 
     @media (max-height: 700px) {
       height: 29.5vh;
@@ -74,6 +78,7 @@ const Question = styled(QuestionCallout)`
 
 const ButtonWrapper = styled.div`
   height: fit-content;
+  width: 100%;
 `;
 
 const QuestionWrapper = (props) => {

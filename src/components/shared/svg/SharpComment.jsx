@@ -4,9 +4,10 @@ const SharpComment = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="auto"
-      height="auto"
+      width="100%"
+      height="100%"
       viewBox="0 0 583 481"
+      preserveAspectRatio="none"
     >
       <image
         id="Sharp"

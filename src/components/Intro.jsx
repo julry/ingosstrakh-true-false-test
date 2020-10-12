@@ -15,11 +15,11 @@ const Wrapper = styled.div`
 const ImagesWrapper = styled.div`
   position: relative;
   padding-top: 2vh;
-  height: 35%;
+  height: 30%;
 `;
 const ImageBackground = styled.div`
   position: absolute;
-  height: 35.5vh;
+  height: 30.5vh;
   right: 0;
   top: 0;
   left: 0;
@@ -31,8 +31,14 @@ const ImageBackground = styled.div`
 const LogoWrapper = styled.div`
   width: 58.6vw;
   max-width: 200px;
-  max-height: 50px;
+  height: 2.45vh;
+  max-height: 30px;
+  position: absolute;
+  top: 6vh;
+  left: 0;
+  z-index: 4;
   @media screen and (min-width: 640px) {
+    height: 14px;
     width: 50%;
   }
 `;
@@ -40,7 +46,7 @@ const LogoWrapper = styled.div`
 const ImageWrapper = styled.div`
   position: absolute;
   top: 12.45vh;
-  height: 23vh;
+  height: 18vh;
   z-index: 0;
   width: 100%;
   max-width: 400px;
@@ -59,10 +65,10 @@ const TitleWrapper = styled.div`
   margin: -7vh auto 0;
 
   @media screen and (max-height: 750px) {
-    margin-top: -10vh;
+    margin-top: -5vh;
   }
   @media screen and (min-width: 640px) {
-    margin-top: -6vh;
+    margin-top: -1vh;
     @media (max-height: 700px) {
       margin-top: -4vh;
     }
@@ -74,7 +80,7 @@ const TitleWrapper = styled.div`
 
 const DescriptionField = styled(SharpCallout)`
   font-size: 19px;
-  height: 38.06vh;
+  height: 32.26vh;
   max-height: 290px;
   max-width: 320px;
   width: 89.7673vw;
@@ -141,16 +147,15 @@ const MotivationText = styled.p`
   @media screen and (min-width: 640px) {
     margin: -65px 0 45px 190px;
     font-size: 18px;
-    
+
     @media (max-height: 700px) {
-        margin: -11vh 0 8vh 25vh;
-        font-size: 16px;
+      margin: -11vh 0 8vh 25vh;
+      font-size: 16px;
     }
-     @media (max-height: 550px) {
-        margin: -11vh 0 3vh 25vh;
-        font-size: 14px;
+    @media (max-height: 550px) {
+      margin: -11vh 0 3vh 25vh;
+      font-size: 14px;
     }
-    
   }
 `;
 const ButtonWrapper = styled.div`

@@ -8,7 +8,7 @@ import ExplanationWrapper from "../../ExplanationWrapper";
 const FirstDescription = styled(SmoothCallout)`
   font-size: 18px;
   height: 28.5vh;
-  width: 100vw;
+  width: 89vw;
   @media screen and (max-height: 550px) {
     font-size: 10px;
     line-height: 1em;
@@ -34,8 +34,8 @@ const FirstDescription = styled(SmoothCallout)`
 
 const SecondDescription = styled(SharpCallout)`
   margin-top: 5%;
-  width: 86.6vw;
-  height: 36.6vh;
+  width: 84.6vw;
+  height: 34.6vh;
   font-size: 18px;
   @media screen and (max-height: 550px) {
     font-size: 12px;

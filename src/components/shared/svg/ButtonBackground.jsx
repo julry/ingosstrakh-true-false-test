@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  position: relative;
-  height: 11vh;
-  width: 45vw;
+  height: 100%;
+  width: 100%;
   max-width: 180px;
+  position: relative;
   @media screen and (min-width: 640px) {
     width: 140px;
     height: 70px;
@@ -18,10 +18,10 @@ const Wrapper = styled.div`
 
 const Background = styled.div`
   position: absolute;
-  height: 9.4vh;
-  width: 43.09vw;
+  height: 85%;
+  width: 95.7%;
   max-width: 173px;
-  top: 1.85vw;
+  top: 1.65vw;
   left: 1.5vw;
   z-index: ${(props) => props.index};
 
@@ -51,11 +51,11 @@ const Background = styled.div`
 
 const Border = styled.div`
   position: absolute;
-  height: 10.6vh;
-  width: 45vw;
+  height: 96%;
+  width: 100%;
   max-width: 180px;
-  top: 0.11vh;
-  left: 0;
+  top: 0.18vh;
+  left: 0.1vw;
 
   @media screen and (min-width: 640px) {
     width: 140px;
@@ -72,11 +72,12 @@ const Border = styled.div`
 `;
 
 const BlackBorder = styled(Border)`
-  height: 11vh;
+  height: 100%;
   top: 0;
+  left: 0;
+
   @media screen and (min-width: 640px) {
     height: 70px;
-    left: 0;
     @media (max-height: 700px) {
       height: 9vh;
       width: 19vh;
@@ -88,45 +89,45 @@ const ButtonBackground = (props) => {
   const { index, backColor, mainColor } = { ...props };
   return (
     <Wrapper>
-      <Background index={index}>
-        <svg
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="auto"
-          height="100%"
-          viewBox="0 0 280.000000 130.000000"
-          preserveAspectRatio="xMidYMid meet"
-          fill={backColor}
-        >
-          <g
-            transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
-            stroke="none"
+        <Background index={index}>
+          <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 280.000000 130.000000"
+              preserveAspectRatio="xMidYMid meet"
+              fill={backColor}
           >
-            <path
-              d="M1135 1294 c-16 -2 -70 -9 -120 -15 -402 -49 -784 -212 -930 -396
+            <g
+                transform="translate(0.000000,130.000000) scale(0.100000,-0.100000)"
+                stroke="none"
+            >
+              <path
+                  d="M1135 1294 c-16 -2 -70 -9 -120 -15 -402 -49 -784 -212 -930 -396
                     -25 -32 -54 -82 -65 -111 -27 -70 -27 -174 0 -244 89 -238 463 -429 1000 -510
                     115 -18 645 -18 760 0 359 54 642 155 824 293 81 61 149 146 176 217 27 70 27
                     174 0 244 -86 230 -448 421 -957 504 -93 15 -609 29 -688 18z"
-            />
-          </g>
-        </svg>
-      </Background>
-      <Border>
-        <svg
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="auto"
-          height="100%"
-          viewBox="0 0 290.000000 147.000000"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <g
-            transform="translate(0.000000,147.000000) scale(0.100000,-0.100000)"
-            fill={mainColor}
-            stroke="none"
+              />
+            </g>
+          </svg>
+        </Background>
+        <Border>
+          <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 290.000000 147.000000"
+              preserveAspectRatio="xMidYMid meet"
           >
-            <path
-              d="M1090 1449 c-63 -10 -131 -20 -150 -22 -19 -2 -51 -9 -70 -15 -19 -6
+            <g
+                transform="translate(0.000000,147.000000) scale(0.100000,-0.100000)"
+                fill={mainColor}
+                stroke="none"
+            >
+              <path
+                  d="M1090 1449 c-63 -10 -131 -20 -150 -22 -19 -2 -51 -9 -70 -15 -19 -6
                 -87 -25 -150 -43 -63 -18 -119 -36 -124 -41 -6 -4 -16 -8 -23 -8 -22 0 -254
                 -118 -273 -140 -3 -3 -26 -22 -52 -43 -54 -43 -117 -106 -135 -133 -18 -26
                 -76 -147 -78 -159 -7 -50 -19 -95 -26 -95 -5 0 -9 -23 -9 -50 0 -64 44 -157
@@ -147,36 +148,36 @@ const ButtonBackground = (props) => {
                 30 -14 17 -30 30 -34 30 -5 0 -15 9 -23 20 -8 11 -18 20 -23 20 -5 0 -39 20
                 -76 44 -92 60 -181 104 -276 137 -22 8 -42 16 -45 19 -7 7 -91 34 -170 55 -36
                 9 -81 21 -100 26 -19 5 -113 21 -208 34 -217 31 -473 33 -652 4z"
-            />
-          </g>
-        </svg>
-      </Border>
-      <BlackBorder>
-        <svg
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="auto"
-          height="100%"
-          viewBox="0 0 290.000000 152.000000"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <g
-            transform="translate(0.000000,152.000000) scale(0.100000,-0.100000)"
-            fill="#000000"
-            stroke="none"
+              />
+            </g>
+          </svg>
+        </Border>
+        <BlackBorder>
+          <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 290.000000 152.000000"
+              preserveAspectRatio="xMidYMid meet"
           >
-            <path
-              d="M1096 1504 c-311 -41 -601 -138 -796 -265 -98 -64 -211 -183 -248
+            <g
+                transform="translate(0.000000,152.000000) scale(0.100000,-0.100000)"
+                fill="#000000"
+                stroke="none"
+            >
+              <path
+                  d="M1096 1504 c-311 -41 -601 -138 -796 -265 -98 -64 -211 -183 -248
                             -260 -17 -36 -36 -85 -41 -109 -55 -240 113 -476 454 -636 694 -326 1577 -304
                             2123 53 96 62 224 198 261 275 88 186 54 352 -107 520 -191 200 -526 351 -917
                             414 -142 23 -582 28 -729 8z m798 -113 c418 -68 691 -182 858 -360 36 -38 78
                             -95 94 -127 26 -52 29 -70 29 -154 0 -87 -3 -101 -32 -160 -99 -200 -350 -348
                             -733 -434 -492 -109 -1064 -95 -1454 36 -332 111 -552 299 -595 510 -64 308
                             361 609 974 692 66 9 134 18 150 20 17 2 154 3 305 1 220 -2 301 -7 404 -24z"
-            />
-          </g>
-        </svg>
-      </BlackBorder>
+              />
+            </g>
+          </svg>
+        </BlackBorder>
     </Wrapper>
   );
 };

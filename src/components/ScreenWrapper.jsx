@@ -6,9 +6,8 @@ import { ProgressProvider } from "../contexts/ProgressContext";
 import { iphone } from "../constants/images";
 
 const Wrapper = styled.div`
-  max-width: 400px;
-  height: 100vh;
-  margin: 0 auto;
+  width: 100vw;
+  height: 100%;
   background: #1f49b6;
   @media screen and (min-width: 640px) {
     max-height: 770px;
@@ -25,9 +24,9 @@ const Image = styled.img`
     margin-right: -50%;
     transform: translate(-50%, -50%);
     height: 770px;
-    max-height: 100vh;
+    max-height: 100%;
     width: 400px;
-    max-width: 51.948vh;
+    max-width: 51.948%;
     display: block;
     z-index: 100;
     pointer-events: none;
@@ -36,7 +35,8 @@ const Image = styled.img`
 
 const ComponentWrapper = styled.div`
   height: 100%;
-
+  max-width: 400px;
+  margin: 0 auto;
   @media screen and (min-width: 640px) {
     width: 45vh;
     background: #1f49b6;
