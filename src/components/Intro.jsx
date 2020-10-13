@@ -45,8 +45,8 @@ const LogoWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   position: absolute;
-  top: 12.45vh;
-  height: 18vh;
+  top: 10.45vh;
+  height: 27vh;
   z-index: 0;
   width: 100%;
   max-width: 400px;
@@ -58,15 +58,15 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: inherit;
   height: inherit;
+  @media screen and (max-width:640px) {
+     display: none;
+  }
 `;
 
 const TitleWrapper = styled.div`
   width: fit-content;
-  margin: -7vh auto 0;
+  margin: -15vh auto 0;
 
-  @media screen and (max-height: 750px) {
-    margin-top: -5vh;
-  }
   @media screen and (min-width: 640px) {
     margin-top: -1vh;
     @media (max-height: 700px) {
@@ -85,9 +85,11 @@ const DescriptionField = styled(SharpCallout)`
   max-width: 320px;
   width: 89.7673vw;
   
-  @media screen and (min-height: 750px) {
-      font-size: 18px;
+  @media screen and (max-height: 750px) {
+    height: 39.86vh;
+    font-size: 18px;
   }
+  
   @media screen and (max-width: 360px) {
     height: 36.06vh;
     max-width: 280px;

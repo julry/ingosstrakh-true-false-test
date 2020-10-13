@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 `;
 const ImageBackground = styled.div`
   position: absolute;
-  height: 40%;
+  height: 45%;
   right: 0;
   top: 0;
   left: 0;
@@ -25,11 +25,15 @@ const ImageWrapper = styled.div`
   background: white;
   display: flex;
   justify-content: center;
-  height: 40%;
+  height: 45%;
   width: 100%;
+  @media screen and (max-width: 640px) {
+  height: 55%;
+  }
 `;
 const Image = styled.img`
   z-index: 0;
+  object-fit: contain;
   height: auto;
   width: 100%;
 `;
