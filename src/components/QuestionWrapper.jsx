@@ -20,6 +20,9 @@ const ImageBackground = styled.div`
   top: 0;
   left: 0;
   background-color: white;
+  @media screen and (max-width: 640px) {
+    height: 55%;
+  }
 `;
 const ImageWrapper = styled.div`
   background: white;
@@ -28,14 +31,18 @@ const ImageWrapper = styled.div`
   height: 45%;
   width: 100%;
   @media screen and (max-width: 640px) {
-  height: 55%;
+    height: 55%;
   }
 `;
 const Image = styled.img`
   z-index: 0;
   object-fit: contain;
-  height: auto;
+  height: 90%;
   width: 100%;
+
+  @media screen and (max-width: 640px) {
+    height: 80%;
+  }
 `;
 
 const Question = styled(QuestionCallout)`
@@ -64,10 +71,10 @@ const Question = styled(QuestionCallout)`
 
   @media screen and (min-width: 640px) {
     height: 190px;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 0.9em;
     width: 300px;
-    margin-top:-10vh;
+    margin-top: -10vh;
 
     @media (max-height: 700px) {
       height: 29.5vh;
