@@ -53,12 +53,7 @@ const ComponentWrapper = styled.div`
   }
 `;
 export function ScreenWrapper() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const screenParam = urlParams.get("screen");
-
-  const [currentScreenIndex, setCurrentScreenIndex] = useState(
-    +screenParam || 0
-  );
+  const [currentScreenIndex, setCurrentScreenIndex] = useState(0);
   const [isExplanation, setIsExplanation] = useState(false);
   const [score, setScore] = useState(0);
   const [answer, setAnswer] = useState(null);
@@ -103,10 +98,10 @@ export function ScreenWrapper() {
   return (
     <Wrapper>
       <ProgressProvider value={progressProviderValue}>
-          <Image src={iphone} />
-          <ComponentWrapper>
-            <Component />
-          </ComponentWrapper>
+        <Image src={iphone} />
+        <ComponentWrapper>
+          <Component />
+        </ComponentWrapper>
       </ProgressProvider>
     </Wrapper>
   );

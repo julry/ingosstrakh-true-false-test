@@ -120,13 +120,13 @@ const Final = () => {
       <Description text={result.text} />
       <result.component text={result.buttonText} color={ColorTypes.Common} />
       <TextWrapper>
-          <Text>
-              Еще больше интересных фактов {"\n"} в официальной группе{" "}
-              <Link target={"_blank"} href={INGOSSTRAKH_VK_LINK}>
-                  Ингосстрах VK
-              </Link>
-              .
-          </Text>
+        <Text>
+          Еще больше интересных фактов {"\n"} в официальной группе{" "}
+          <Link target={"_blank"} href={INGOSSTRAKH_VK_LINK}>
+            Ингосстрах VK
+          </Link>
+          .
+        </Text>
       </TextWrapper>
     </Wrapper>
   );

@@ -57,8 +57,8 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: inherit;
   height: inherit;
-  @media screen and (max-width:640px) {
-     display: none;
+  @media screen and (max-width: 640px) {
+    display: none;
   }
 `;
 
@@ -83,12 +83,12 @@ const DescriptionField = styled(SharpCallout)`
   max-height: 290px;
   max-width: 320px;
   width: 89.7673vw;
-  
+
   @media screen and (max-height: 750px) {
     height: 39.86vh;
     font-size: 18px;
   }
-  
+
   @media screen and (max-width: 360px) {
     height: 36.06vh;
     max-width: 280px;
