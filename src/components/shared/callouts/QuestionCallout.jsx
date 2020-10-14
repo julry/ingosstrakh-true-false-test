@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   z-index: 1;
-  
+  white-space: pre-line;
    @media screen and (min-width: 640px) {
     height: 105px;
     font-size: 30px;
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 const TextWrapper = styled.div`
   position: relative;
   height: inherit;
-  width: 70%;
+  width: 82%;
   text-align: left;
   z-index: 3;
   @media screen and (min-width: 640px) {

@@ -2,7 +2,6 @@ import React from "react";
 import { introImage } from "../constants/images";
 import Logo from "./shared/svg/Logo";
 import styled from "styled-components";
-import QuestionCallout from "./shared/callouts/QuestionCallout";
 import SharpCallout from "./shared/callouts/SharpCallout";
 import StartButton from "./shared/buttons/StartButton";
 import { ColorTypes } from "../colorTypes.config";
