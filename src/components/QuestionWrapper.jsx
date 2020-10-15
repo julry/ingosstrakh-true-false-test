@@ -103,11 +103,13 @@ const QuestionWrapper = (props) => {
       <Question text={question.text} />
       <ButtonWrapper>
         <AnswerButton
+          id={question.id}
           text={AnswerTypes.Truth}
           correct={question.correct}
           color={ColorTypes.Truth}
         />
         <AnswerButton
+          id={question.id}
           text={AnswerTypes.Falsity}
           correct={question.correct}
           color={ColorTypes.Falsity}

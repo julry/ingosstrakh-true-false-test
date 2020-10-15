@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import NextButton from "./shared/buttons/NextButton";
 import { ProgressContext } from "../contexts/ProgressContext";
-import AnswerButton from "./shared/buttons/AnswerButton";
 import { ColorTypes } from "../colorTypes.config";
 import Next from "./shared/svg/Next";
 import ExplanationTitle from "./ExplanationTitle";
+import { questions } from "../questions.config";
+import { reachMetrikaGoal } from "../utils/reachMetrikaGoal";
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,12 +43,19 @@ const ExplanationWrapper = (props) => {
   const { setNext, answer } = useContext(ProgressContext);
   const isCorrect = answer === props.correct;
   const color = isCorrect ? ColorTypes.Truth : ColorTypes.Falsity;
+  const onNext = () => {
+    if (+props.id === questions.length) {
+      reachMetrikaGoal("finishtest");
+    }
+    setNext();
+  };
+
   return (
     <Wrapper>
       <Background backgroundColor={color} />
       <ExplanationTitle text={props.correct} color={color} />
       {props.children}
-      <ButtonWrapper onClick={setNext}>
+      <ButtonWrapper onClick={onNext}>
         <Next />
       </ButtonWrapper>
     </Wrapper>

@@ -5,6 +5,7 @@ import { ProgressContext } from "../contexts/ProgressContext";
 import SharpCallout from "./shared/callouts/SharpCallout";
 import { ColorTypes } from "../colorTypes.config";
 import checkResult from "../utils/checkResult";
+import {reachMetrikaGoal} from "../utils/reachMetrikaGoal";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -112,6 +113,10 @@ const Final = () => {
 
   const INGOSSTRAKH_VK_LINK = "https://vk.com/ingosstart";
 
+  const onSocialMediaClick = () => {
+       reachMetrikaGoal('smm'+ result.success);
+  }
+
   return (
     <Wrapper>
       <Title>
@@ -122,7 +127,7 @@ const Final = () => {
       <TextWrapper>
         <Text>
           Еще больше интересных фактов {"\n"} в официальной группе{" "}
-          <Link target={"_blank"} href={INGOSSTRAKH_VK_LINK}>
+          <Link target={"_blank"} href={INGOSSTRAKH_VK_LINK} onClick={onSocialMediaClick}>
             Ингосстрах VK
           </Link>
           .

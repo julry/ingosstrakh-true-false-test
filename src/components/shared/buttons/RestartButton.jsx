@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { ProgressContext } from "../../../contexts/ProgressContext";
 import Button from "./Button";
 import styled from "styled-components";
+import {reachMetrikaGoal} from "../../../utils/reachMetrikaGoal";
 
 const StyledButton = styled(Button)`
   text-align: center;
@@ -32,6 +33,7 @@ const RestartButton = (props) => {
   );
 
   const onRestart = () => {
+    reachMetrikaGoal('tryagain');
     setTimeout(() => {
       setScore(0);
       setAnswer(null);
