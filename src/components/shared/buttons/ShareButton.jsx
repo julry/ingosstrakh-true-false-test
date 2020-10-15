@@ -3,6 +3,7 @@ import Button from "./Button";
 import styled from "styled-components";
 import { resolve } from "url";
 import { shareImage } from "../../../constants/images";
+import {reachMetrikaGoal} from "../../../utils/reachMetrikaGoal";
 
 const StyledButton = styled(Button)`
   text-align: center;
@@ -55,6 +56,7 @@ const ShareButton = (props) => {
   const link = `http://vk.com/share.php?${queryParams.toString()}`;
 
   const onShare = () => {
+    reachMetrikaGoal('share');
     setTimeout(() => window.open(link, "mywindow"), 300);
   };
 
